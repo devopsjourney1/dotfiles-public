@@ -93,5 +93,5 @@ x 	   # close current pane
 
 ### Re-read config
 ```
-:tmux source-file ~/.tmux.conf
+:source-file ~/.tmux.conf
 ```
