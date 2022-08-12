@@ -42,19 +42,19 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 ## Zsh-Z
 ```
-z  //Searches frequently access directory
+z  #Searches frequently access directory
 ```
 ## FZF - Fuzzy Search
-^r  //Searches command history
-^t  //Searches directories
+^r  #Searches command history
+^t  #Searches directories
 ```
 
 
 ## Tmux
 ```
-tmux new -s <session name>  //create
-tmux a -s <session name>   //attach
-tmux kill-session -a  //kill all sessions but current
+tmux new -s <session name>  #create
+tmux a -s <session name>    #attach
+tmux kill-session -a  	    #kill all sessions but current
 ```
 
 Sessions 
@@ -65,29 +65,29 @@ Sessions
 ### Sessions
 ```
 :new -s <session name>
-s //choose session
-$ //rename session
-d //detach session
+s	#choose session
+$	#rename session
+d 	#detach session
 ```
 
 
 ### Windows
 ```
-c //creates window
-w //preview window
-, //rename window
-& //close window
+c 	#creates window
+w 	#preview window
+, 	#rename window
+& 	#close window
 ```
 
 
 ### Panes
 ```
-% //right
-" //bottem
-arrow keys //switch between panes
-z //toggle zoom
-x // close current pane
-! // convert pane into window
+% 	   # right
+" 	   #bottem
+arrows 	   #switch between panes
+z 	   #toggle zoom
+x 	   #close current pane
+! 	   #convert pane into window
 ```
 
 ### Re-read config
