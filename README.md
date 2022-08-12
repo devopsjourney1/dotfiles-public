@@ -45,6 +45,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 z  #Searches frequently access directory
 ```
 ## FZF - Fuzzy Search
+```
 ^r  #Searches command history
 ^t  #Searches directories
 ```
