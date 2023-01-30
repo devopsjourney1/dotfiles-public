@@ -3,10 +3,25 @@
 These are my dotfiles and cheatsheets for basic Terminal setup on MacOS / Linux / Windows.
 
 
-# Setup
+# Setup Zsh
+~/.zshrc
 
+```
+#Zsh - Linux Debian (and Windows WSL2)
+sudo apt-get install zsh -y
+chsh -s /usr/bin/zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-## Linux Debian (and Windows WSL2)
+#ZSH plugins
+git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlightingc
+
+#Powerline Go
+go install github.com/justjanne/powerline-go@latest
+```
+
+## Other Tools - Linux Debian (and Windows WSL2)
 ```
 # Basic tools, nerdfont, fuzzy finders
 sudo apt update
@@ -24,17 +39,6 @@ cd nerd-fonts
 # Neo vim install
 sudo apt install neovim -y
 sudo apt install exuberant-ctags
-
-
-#Zsh
-sudo apt-get install zsh -y
-chsh -s /usr/bin/zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-#ZSH plugins
-git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlightingc
 ```
 
 
