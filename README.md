@@ -23,29 +23,31 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlightingc
 
 #Powerline Go
+sudo apt install golang-go -y
 go install github.com/justjanne/powerline-go@latest
 ```
 
 ## Other Tools - Linux Debian (and Windows WSL2)
+
+### Neo vim install
 ```
-# Basic tools, nerdfont, fuzzy finders
+sudo apt install neovim -y
+sudo apt install exuberant-ctags
+cp init.vim ~/.config/nvim/init.vim
+```
+
+```
+### Basic tools, nerdfont, fuzzy finders
 sudo apt update
 sudo apt install peco -y
 sudo apt install exa -y
-sudo apt install golang-go -y
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 sudo apt install python3-pip
 git lone --depth 1 https://github.com/ryanoasis/nerd-fonts
 cd nerd-fonts
 ./install.sh Hack
-
-
-# Neo vim install
-sudo apt install neovim -y
-sudo apt install exuberant-ctags
 ```
-
 
 # Cheatsheets - Frequently used commands
 
