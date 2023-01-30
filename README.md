@@ -3,8 +3,13 @@
 These are my dotfiles and cheatsheets for basic Terminal setup on MacOS / Linux / Windows.
 
 
-# Setup Zsh
-~/.zshrc
+# Setup Zsh and Powerline Go
+
+I use Zsh as my default shell and Powerline Go to modify my prompt.  These are the basic instructions below:
+
+- run the installation cmds
+- copy .zshrc to ~/.zshrc
+- you may need to tweak some settings and install extra dependencies to get it to work in your environment.  Refer to the documentation for Zsh and Powerline Go.
 
 ```
 #Zsh - Linux Debian (and Windows WSL2)
