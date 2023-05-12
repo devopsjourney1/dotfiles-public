@@ -7,36 +7,34 @@ WARNING: You should be familiar with what you are doing when setting these thing
 
 # Setup Zsh and Powerline Go
 
-I use Zsh as my default shell and Powerline Go to modify my prompt.  These are the basic instructions below:
+I use Zsh as my default shell, Oh-my-zsh for plugins and Startship for my prompt. The themes I have also require Nerd Fonts.
 
-- run the installation cmds
-- copy .zshrc to ~/.zshrc
-- you may need to tweak some settings and install extra dependencies to get it to work in your environment.  Refer to the documentation for Zsh and Powerline Go.
+- Run the installation commands below
+- copy .zshrc file and the directories into your `$HOME` directory
+- you may need to tweak some settings and install extra dependencies to get it to work in your environment.  Refer to the documentation for Zsh, Oh-my-zsh and Startship prompt.
 
 ```
-#Zsh - Linux Debian (and Windows WSL2)
+#Zsh - Linux Debian/Windows WSL2
 sudo apt-get install zsh -y
 chsh -s /usr/bin/zsh
+
+#Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #ZSH plugins
-git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlightingc
 
-#Powerline Go
-sudo apt install golang-go -y
-go install github.com/justjanne/powerline-go@latest
+#Starship Prompt
+curl -sS https://starship.rs/install.sh | sh
+
+# Nerd Fonts - Hack font
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts
+cd nerd-fonts
+./install.sh Hack
 ```
 
-## Other Tools - Linux Debian (and Windows WSL2)
-
-### Neo vim install
-```
-sudo apt install neovim -y
-sudo apt install exuberant-ctags
-cp init.vim ~/.config/nvim/init.vim
-```
+## Other Tools
 
 ```
 ### Basic tools, nerdfont, fuzzy finders
@@ -46,9 +44,12 @@ sudo apt install exa -y
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 sudo apt install python3-pip
-git lone --depth 1 https://github.com/ryanoasis/nerd-fonts
-cd nerd-fonts
-./install.sh Hack
+```
+
+### Neo vim install
+```
+sudo apt install neovim -y
+sudo apt install exuberant-ctags
 ```
 
 # Cheatsheets - Frequently used commands
@@ -62,7 +63,6 @@ z  # Searches frequently access directory
 ^r  # Searches command history
 ^t  # Searches directories
 ```
-
 
 ## Tmux
 ```
@@ -92,7 +92,6 @@ w 	# preview window
 , 	# rename window
 & 	# close window
 ```
-
 
 ### Panes
 ```
