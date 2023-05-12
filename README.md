@@ -1,9 +1,6 @@
 # dotfiles-public
 
-These are my dotfiles and cheatsheets for basic Terminal setup on MacOS / Linux / Windows.
-
-WARNING: You should be familiar with what you are doing when setting these things up. I have aliases set etc. that will not work if you dont have the correct tools installed.  I do not recommend you copy/paste my .zshrc verbatim but instead have a look at it and copy things that you need.
-
+These are my dotfiles and cheatsheets for basic Terminal setup on MacOS / Linux / Windows WSL2.
 
 # Setup Zsh and Powerline Go
 
