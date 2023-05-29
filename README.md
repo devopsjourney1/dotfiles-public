@@ -2,7 +2,7 @@
 
 These are my dotfiles and cheatsheets for basic Terminal setup on MacOS / Linux / Windows WSL2.
 
-# Setup Zsh and Powerline Go
+# Setup Zsh/Starship
 
 I use Zsh as my default shell, Oh-my-zsh for plugins and Startship for my prompt. The themes I have also require Nerd Fonts.
 
@@ -12,7 +12,8 @@ I use Zsh as my default shell, Oh-my-zsh for plugins and Startship for my prompt
 
 ```
 #Zsh - Linux Debian/Windows WSL2
-sudo apt-get install zsh -y
+sudo apt update
+sudo apt install zsh -y
 chsh -s /usr/bin/zsh
 
 #Oh-my-zsh
