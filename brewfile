@@ -1,6 +1,6 @@
 # Nerd Fonts
 tap "homebrew/cask-fonts"
-brew "font-hack-nerd-font"
+cask "font-hack-nerd-font"
 
 # Tools
 brew "awscli"
