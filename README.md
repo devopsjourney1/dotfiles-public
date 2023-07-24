@@ -11,17 +11,13 @@ I use Zsh as my default shell, Oh-my-zsh for plugins and Startship for my prompt
 - you may need to tweak some settings and install extra dependencies to get it to work in your environment.  Refer to the documentation for Zsh, Oh-my-zsh and Startship prompt.
 
 ```
-#Zsh - Linux Debian/Windows WSL2
-sudo apt update
-sudo apt install zsh -y
-chsh -s /usr/bin/zsh
-
 #Oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #ZSH plugins
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlightingc
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
 
 #Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
