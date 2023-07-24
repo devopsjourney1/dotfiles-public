@@ -1,0 +1,12 @@
+# Nerd Fonts
+tap "homebrew/cask-fonts"
+brew "font-hack-nerd-font"
+
+# Tools
+brew "awscli"
+brew "terraform"
+brew "tfenv"
+
+# CLI Stuff
+brew "peco"
+brew "exa"
