@@ -8,5 +8,11 @@ brew "terraform"
 brew "tfenv"
 
 # CLI Stuff
+brew "jq"
 brew "peco"
 brew "exa"
+
+
+# Kubernetes
+brew "kubectx"
+brew "minikube"
