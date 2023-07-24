@@ -22,10 +22,14 @@ git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/pl
 #Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
 
-# Nerd Fonts - Hack font
+# Nerd Fonts - Hack font (via git)
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts
 cd nerd-fonts
 ./install.sh Hack
+
+# Nerd Fonts - Hack font (via homebrew)
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
 ```
 
 ## Other Tools
