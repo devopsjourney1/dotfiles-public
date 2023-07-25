@@ -16,3 +16,6 @@ brew "exa"
 # Kubernetes
 brew "kubectx"
 brew "minikube"
+brew "helm"
+brew "krew"
+brew "derailed/k9s/k9s`"

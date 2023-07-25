@@ -31,7 +31,7 @@ case $_distro in
     *devuan*)                ICON="";;
     *manjaro*)               ICON="";;
     *rhel*)                  ICON="";;
-    *macos*)                 ICON="";;
+    *macos*)                 ICON="";;
     *)                       ICON="";;
 esac
 
