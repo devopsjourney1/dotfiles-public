@@ -10,8 +10,8 @@ $all[╰─](238)$character"""
 
 # Change the default prompt characters
 [character]
-success_symbol = "[](red)"
-error_symbol = "[](green)"
+success_symbol = "[](green)"
+error_symbol = "[](red)"
 
 # Shows an icon depending on what distro it is running on
 [env_var.STARSHIP_DISTRO]
