@@ -10,8 +10,8 @@ $all[╰─](238)$character"""
 
 # Change the default prompt characters
 [character]
-success_symbol = "[](238)"
-error_symbol = "[](238)"
+success_symbol = "[](red)"
+error_symbol = "[](green)"
 
 # Shows an icon depending on what distro it is running on
 [env_var.STARSHIP_DISTRO]
@@ -70,7 +70,7 @@ deleted = " "
 
 # Shows kubernetes context and namespace
 [kubernetes]
-format = '[ﴱ $context\($namespace\)](bold purple) '
+format = '[󱃾 $context\($namespace\)](bold purple) '
 disabled = false
 
 # ---
