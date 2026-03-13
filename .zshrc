@@ -9,7 +9,7 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 export KUBECONFIG=~/.kube/config
 
 # ZSH Setup
-plugins=(zsh-z zsh-autosuggestions aws git brew docker docker-compose gradle terraform zsh-syntax-highlighting)
+plugins=(zsh-z zsh-autosuggestions aws git brew docker docker-compose gradle terraform zsh-syntax-highlighting fzf history-substring-search)
 source $ZSH/oh-my-zsh.sh
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
@@ -36,4 +36,14 @@ eval "$(starship init zsh)"
 
 
 # Setup Fuzzy Finder
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if command -v fzf >/dev/null 2>&1; then
+  eval "$(fzf --zsh)"
+elif [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+fi
+
+# Keybindings for history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down

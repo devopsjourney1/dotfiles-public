@@ -10,8 +10,8 @@ $all[╰─](238)$character"""
 
 # Change the default prompt characters
 [character]
-success_symbol = "[](green)"
-error_symbol = "[](red)"
+success_symbol = "[󰄬](green)"
+error_symbol = "[󰅖](red)"
 
 # Shows an icon depending on what distro it is running on
 [env_var.STARSHIP_DISTRO]
@@ -39,14 +39,14 @@ us-east-1 = 'va'
 [directory]
 truncation_length = 20
 truncation_symbol = "…/"
-home_symbol = " ~"
+home_symbol = "󱂵 ~"
 read_only_style = "197"
-read_only = "  "
+read_only = "󰌾"
 format = "[$path]($style)[$read_only]($read_only_style) "
 
 # Shows current git branch
 [git_branch]
-symbol = " "
+symbol = "󰊢 "
 format = "[$symbol$branch]($style) "
 # truncation_length = 4
 truncation_symbol = "…/"
@@ -56,22 +56,22 @@ style = "bold green"
 [git_status]
 format = '[\($all_status$ahead_behind\)]($style) '
 style = "bold green"
-conflicted = "🏳"
-up_to_date = ""
-untracked = " "
-ahead = "⇡${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-behind = "⇣${count}"
-stashed = " "
-modified = " "
+conflicted = "󰞇"
+up_to_date = "󰄬"
+untracked = "󰚌"
+ahead = "󰶣${count}"
+diverged = "󰹹󰶣${ahead_count}󰶡${behind_count}"
+behind = "󰶡${count}"
+stashed = "󱗜"
+modified = "󰷉"
 staged = '[++\($count\)](green)'
-renamed = "襁 "
-deleted = " "
+renamed = "󰚔"
+deleted = "󰆴"
 
 # Shows kubernetes context and namespace
 [kubernetes]
 format = '[󱃾 $context\($namespace\)](bold purple) '
-disabled = false
+disabled = true
 
 # ---
 
