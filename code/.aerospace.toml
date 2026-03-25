@@ -1,0 +1,147 @@
+# Aerospace config
+# Modifier: alt (option key)
+#
+# Monitor layout:
+#   Monitor 1 = laptop (Built-in Retina)
+#   Monitor 2 = 32" Mi TV      → A, T, B, C, E, N, 1-4
+#   Monitor 3 = 27" DELL       → S, V, M
+
+start-at-login = true
+automatically-unhide-macos-hidden-apps = true
+
+# Workspace-to-monitor pinning
+# Uses monitor names so assignments are stable regardless of lid open/closed
+[workspace-to-monitor-force-assignment]
+A = ['Mi TV', 'Built-in Retina Display']
+T = ['Mi TV', 'Built-in Retina Display']
+B = ['Mi TV', 'Built-in Retina Display']
+C = ['Mi TV', 'Built-in Retina Display']
+E = ['Mi TV', 'Built-in Retina Display']
+N = ['Mi TV', 'Built-in Retina Display']
+1 = ['Mi TV', 'Built-in Retina Display']
+2 = ['Mi TV', 'Built-in Retina Display']
+3 = ['Mi TV', 'Built-in Retina Display']
+4 = ['Mi TV', 'Built-in Retina Display']
+O = ['DELL S2721DGF', 'Mi TV']
+X = ['Mi TV', 'Built-in Retina Display']
+Y = ['Mi TV', 'Built-in Retina Display']
+S = ['DELL S2721DGF', 'Mi TV']
+V = ['DELL S2721DGF', 'Mi TV']
+M = ['DELL S2721DGF', 'Mi TV']
+
+[mode.main.binding]
+# Named workspaces — switch and launch app
+alt-a = ['workspace A', 'exec-and-forget open -a "App Store"']
+alt-t = ['workspace T', 'exec-and-forget open -a "iTerm"']
+alt-b = ['workspace B', 'exec-and-forget open -a "Google Chrome"']
+alt-c = ['workspace C', 'exec-and-forget open -a "Claude"']
+alt-e = ['workspace E', 'exec-and-forget open -a "Visual Studio Code"']
+alt-n = ['workspace N', 'exec-and-forget open -a "Notion"']
+alt-o = ['workspace O', 'exec-and-forget open -a "OBS"']
+alt-x = ['workspace X', 'exec-and-forget open -a "Termius"']
+alt-s = ['workspace S', 'exec-and-forget open -a "Discord"']
+alt-y = ['workspace Y', 'exec-and-forget open -a "Jellyfin Media Player"']
+alt-v = ['workspace V', 'exec-and-forget open -a "DaVinci Resolve"']
+alt-m = 'workspace M'
+
+# Move window to named workspace
+alt-shift-a = 'move-node-to-workspace A'
+alt-shift-t = 'move-node-to-workspace T'
+alt-shift-b = 'move-node-to-workspace B'
+alt-shift-c = 'move-node-to-workspace C'
+alt-shift-e = 'move-node-to-workspace E'
+alt-shift-n = 'move-node-to-workspace N'
+alt-shift-o = 'move-node-to-workspace O'
+alt-shift-x = 'move-node-to-workspace X'
+alt-shift-y = 'move-node-to-workspace Y'
+alt-shift-s = 'move-node-to-workspace S'
+alt-shift-v = 'move-node-to-workspace V'
+alt-shift-m = 'move-node-to-workspace M'
+
+# Numbered workspaces
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+
+# Move window to numbered workspace
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+
+# Focus windows
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+# Move windows
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# Focus monitor
+alt-ctrl-h = 'focus-monitor --wrap-around prev'
+alt-ctrl-l = 'focus-monitor --wrap-around next'
+
+# Move window to monitor
+alt-shift-tab = 'workspace --wrap-around next'
+alt-shift-left = ['move-node-to-monitor --wrap-around prev', 'focus-monitor --wrap-around prev']
+alt-shift-right = ['move-node-to-monitor --wrap-around next', 'focus-monitor --wrap-around next']
+
+# Layout
+alt-f = 'fullscreen'
+alt-shift-f = 'layout floating tiling'
+alt-slash = 'layout tiles horizontal vertical'
+alt-comma = 'layout accordion horizontal vertical'
+
+# Misc
+alt-shift-q = 'close'
+alt-shift-r = 'reload-config'
+
+# Auto-float apps
+[[on-window-detected]]
+if.app-name-regex-substring = 'System Preferences'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'System Settings'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Calculator'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Activity Monitor'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = '1Password'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Alfred'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Raycast'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Discord'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'IINA'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Docker'
+run = 'layout floating'
