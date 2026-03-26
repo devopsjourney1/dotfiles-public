@@ -31,17 +31,17 @@ M = ['DELL S2721DGF', 'Mi TV']
 
 [mode.main.binding]
 # Named workspaces — switch and launch app
-alt-a = ['workspace A', 'exec-and-forget open -a "App Store"']
-alt-t = ['workspace T', 'exec-and-forget open -a "iTerm"']
-alt-b = ['workspace B', 'exec-and-forget open -a "Google Chrome"']
-alt-c = ['workspace C', 'exec-and-forget open -a "Claude"']
-alt-e = ['workspace E', 'exec-and-forget open -a "Visual Studio Code"']
-alt-n = ['workspace N', 'exec-and-forget open -a "Notion"']
-alt-o = ['workspace O', 'exec-and-forget open -a "OBS"']
-alt-x = ['workspace X', 'exec-and-forget open -a "Termius"']
-alt-s = ['workspace S', 'exec-and-forget open -a "Discord"']
-alt-y = ['workspace Y', 'exec-and-forget open -a "Jellyfin Media Player"']
-alt-v = ['workspace V', 'exec-and-forget open -a "DaVinci Resolve"']
+alt-a = ['workspace A', "exec-and-forget osascript -e 'if application \"App Store\" is not frontmost then tell application \"App Store\" to activate'"]
+alt-t = ['workspace T', "exec-and-forget osascript -e 'if application \"iTerm\" is not frontmost then tell application \"iTerm\" to activate'"]
+alt-b = ['workspace B', "exec-and-forget osascript -e 'if application \"Google Chrome\" is not frontmost then tell application \"Google Chrome\" to activate'"]
+alt-c = ['workspace C', "exec-and-forget osascript -e 'if application \"Claude\" is not frontmost then tell application \"Claude\" to activate'"]
+alt-e = ['workspace E', "exec-and-forget osascript -e 'if application \"Visual Studio Code\" is not frontmost then tell application \"Visual Studio Code\" to activate'"]
+alt-n = ['workspace N', "exec-and-forget osascript -e 'if application \"Notion\" is not frontmost then tell application \"Notion\" to activate'"]
+alt-o = ['workspace O', "exec-and-forget osascript -e 'if application \"OBS\" is not frontmost then tell application \"OBS\" to activate'"]
+alt-x = ['workspace X', "exec-and-forget osascript -e 'if application \"Termius\" is not frontmost then tell application \"Termius\" to activate'"]
+alt-s = ['workspace S', "exec-and-forget osascript -e 'if application \"Discord\" is not frontmost then tell application \"Discord\" to activate'"]
+alt-y = ['workspace Y', "exec-and-forget osascript -e 'if application \"Jellyfin Media Player\" is not frontmost then tell application \"Jellyfin Media Player\" to activate'"]
+alt-v = ['workspace V', "exec-and-forget osascript -e 'if application \"DaVinci Resolve\" is not frontmost then tell application \"DaVinci Resolve\" to activate'"]
 alt-m = 'workspace M'
 
 # Move window to named workspace
@@ -144,4 +144,8 @@ run = 'layout floating'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'Docker'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Steam'
 run = 'layout floating'
